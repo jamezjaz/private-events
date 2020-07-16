@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <% if session[:current_user] %>
+      <%= session[:current_user] %>
+      <%= link_to 'Log Out', '/sessions', method: :delete %> 
+      <% else %>
+      <%= link_to 'Sign In', new_sessions_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
