@@ -1,0 +1,23 @@
+<div class="all-event">
+  <h2>All Events</h2>
+  <table border="1">
+    <thead>
+    <tr>
+      <th>Event Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @events.each do |c| %>
+        <tr>
+          <td><%= link_to c.name, event_path(c) %> </td>
+          <td><%= c.description %></td>
+          <td><%= c.location %></td>
+          <td><%= c.date %></td>
+        </tr>
+      <%end %>
+    </tbody>
+  </table>
+</div>

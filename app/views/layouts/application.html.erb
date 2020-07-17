@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PrivateEvents</title>
+    <title>Welcome to Private Events</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,12 +10,20 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
     <% if session[:current_user] %>
-      <%= session[:current_user] %>
-      <%= link_to 'Log Out', '/sessions', method: :delete %> 
-      <% else %>
-      <%= link_to 'Sign In', new_sessions_path %>
+      <span class='nav-items'>
+        Welcome: <%=link_to session[:current_user], user_path(session[:current_user_id]) %> !
+      </span>
+      <%= link_to 'Create Event', new_event_path, class: 'nav-items' %>
+      <%= link_to 'All Event', events_path, class: 'nav-items' %>
+      <%= link_to 'Log Out', '/sessions', method: :delete, class: 'nav-items' %>
+
+    <%else %>
+      <%= link_to 'Sign In', new_sessions_path, class: 'nav-items' %>
+      <%= link_to 'Sign Up', new_user_path, class: 'nav-items' %>
     <% end %>
+  </nav>
     <%= yield %>
   </body>
 </html>

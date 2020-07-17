@@ -1,2 +1,77 @@
-<%= @user.username %> <br />
-<%= @user.email %> <br />
+<h1> Your Events </h1>
+<div class="events">
+  <div class="all-events">
+    <h2>All Events</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <% @user.user_events.each do |c| %>
+        <tbody>
+        <tr>
+            <td><%= c.name %> </td>
+            <td><%= c.description %></td>
+            <td><%= c.location %></td>
+            <td><%= c.date %></td>
+        </tr>
+      </tbody>
+      <%end %>
+    </table>
+
+  </div>
+  <div class="category-events">
+    <div class="future-events">
+      <h2>Upcoming Events</h2>
+      <table border="1">
+        <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Date</th>
+        </tr>
+        </thead>
+        <% @user.user_events.each do |c| %>
+          <tbody>
+          <tr>
+            <td><%= c.name %> </td>
+            <td><%= c.description %></td>
+            <td><%= c.location %></td>
+            <td><%= c.date %></td>
+          </tr>
+          </tbody>
+        <%end %>
+      </table>
+
+    </div>
+    <div class="past-events">
+      <h2>Attended Events</h2>
+      <table border="1">
+        <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Date</th>
+        </tr>
+        </thead>
+        <% @user.user_events.each do |c| %>
+          <tbody>
+          <tr>
+            <td><%= c.name %> </td>
+            <td><%= c.description %></td>
+            <td><%= c.location %></td>
+            <td><%= c.date %></td>
+          </tr>
+          </tbody>
+        <%end %>
+      </table>
+
+    </div>
+  </div>
+</div>

@@ -10,6 +10,69 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
- */
+ /** require_tree .*/
+/** require_self*/
+/**!*/
+
+@import "bootstrap";
+
+.navbar-custom {
+    background-color: blue;
+    padding: 15px 0;
+}
+
+.nav-items {
+    color: rgb(241, 235, 243);
+    padding: 1em;
+    font-size: large;
+    font-weight: bold;
+}
+
+.new-link {
+    display: inline-block;
+    background-color: rgb(224, 218, 218);
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+
+.new-link:hover {
+    color: red;
+}
+
+.username {
+    display: block;
+    background-color: rgb(83, 81, 81);
+    padding: 0.5em;
+}
+
+.post {
+    display: block;
+    background-color: rgb(211, 206, 206);
+    font-size: 1.7em;
+    padding: 0.8em;
+}
+
+.field input {
+    width: 40em;
+    height: 3em;
+    margin-bottom: 1em;
+}
+
+.field label {
+    font-size: 1.5em;
+}
+
+.actions input {
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.events{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    border: solid black 1px;
+}

@@ -1,0 +1,23 @@
+<div class="all-event">
+  <h2>"<%= @event.name %>" created by "<%= @event.user.username %>"</h2>
+  <div class="past-events">
+    <h4>Event Attendees</h4>
+    <table border="1">
+      <thead>
+      <tr>
+        <th>Username</th>
+        <th>Event</th>
+      </tr>
+      </thead>
+        <tbody>
+        <% @event.events_user.each do |c| %>
+        <tr>
+          <td><%= c.attendee_id %> </td>
+          <td><%= c.attended_event_id %></td>
+        </tr>
+          <%end %>
+        </tbody>
+    </table>
+  </div>
+</div>
+
