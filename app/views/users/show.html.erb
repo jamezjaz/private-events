@@ -36,7 +36,7 @@
           <th>Date</th>
         </tr>
         </thead>
-        <% @user.event.each do |c| %>
+        <% @upcoming_events.each do |c| %>
           <tbody>
           <tr>
             <td><%= c.name %> </td>
@@ -60,7 +60,7 @@
           <th>Date</th>
         </tr>
         </thead>
-        <% @user.event.each do |c| %>
+        <% @previous_events.each do |c| %>
           <tbody>
           <tr>
             <td><%= c.name %> </td>

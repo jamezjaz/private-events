@@ -1,14 +1,13 @@
 class EventsController < ApplicationController
   def index
-    # @events = Event.all
-    @events = Event.all.future_events
-    @events = Event.all.past_events
+    @events = Event.all
+
+    @past = Event.past
+    @future = Event.future
   end
 
   def show
     @event = Event.find(params[:id])
-    # @previous_events = @event.event.future_events
-    # @upcoming_events = @event.event.past_events
   end
 
   def new
@@ -21,6 +20,11 @@ class EventsController < ApplicationController
       redirect_to user_path(session[:current_user_id])
     end
   end
+
+  # def past
+  #   @events = Event.all.where(' date < ? ', Date.today)
+  #   @events
+  # end
 
   private
 
