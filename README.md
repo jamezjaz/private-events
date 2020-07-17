@@ -10,9 +10,6 @@ This is an Event management application where users can create events and manage
 - Displayed a list of attendees on the event's show page.
 - Separated upcoming events from previous events, (we also achieved this purpose using class method and scopes).
 
-# Live Version
-
-- [Live Application Access](https://peaceful-tundra-83668.herokuapp.com/)
 
 ## Environment Set Up Requirements
 
