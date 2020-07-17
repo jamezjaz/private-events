@@ -2,12 +2,12 @@
 
 This is an Event management application where users can create events and manage them.
 
-- Here we created the User, Event and Attendee models and their associated controllers.
-- We created a sign up, sign in and create event forms and we ensured the sign in form does not require password.
+- Here we created the User, Event, and Attendee models and their associated controllers.
+- We created a sign-up, sign in, and create event forms and we ensured the sign-in form does not require a password.
 - Implemented one_to_many and many_to_many associations.
-- Displayed a single event and all events in the User's show page.
+- Displayed a single event and all events on the User's show page.
 - Applied #build method of the association in the #create method of events controller.
-- Diplayed list of attendees on the event's show page.
+- Displayed a list of attendees on the event's show page.
 - Separated upcoming events from previous events, (we also achieved this purpose using class method and scopes).
 
 # Live Version
