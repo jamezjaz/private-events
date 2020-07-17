@@ -1,10 +1,14 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    # @events = Event.all
+    @events = Event.all.future_events
+    @events = Event.all.past_events
   end
 
   def show
     @event = Event.find(params[:id])
+    # @previous_events = @event.event.future_events
+    # @upcoming_events = @event.event.past_events
   end
 
   def new
@@ -12,7 +16,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = current_user.user_events.build(event_params)
+    @event = current_user.event.build(event_params)
     if @event.save
       redirect_to user_path(session[:current_user_id])
     end

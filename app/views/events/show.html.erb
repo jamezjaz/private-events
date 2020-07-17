@@ -6,14 +6,14 @@
       <thead>
       <tr>
         <th>Username</th>
-        <th>Event</th>
+        <th>Email</th>
       </tr>
       </thead>
         <tbody>
-        <% @event.events_user.each do |c| %>
+        <% @event.event_users.each do |c| %>
         <tr>
-          <td><%= c.attendee_id %> </td>
-          <td><%= c.attended_event_id %></td>
+          <td><%= c.username %> </td>
+          <td><%= c.email %></td>
         </tr>
           <%end %>
         </tbody>
